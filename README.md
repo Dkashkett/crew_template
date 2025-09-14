@@ -2,13 +2,17 @@
 
 Follow these steps after cloning the repository:
 
+First, ensure you have `uv` installed. https://docs.astral.sh/uv/getting-started/installation/
+
+Next, run the following commands:
 ```bash
-# Create and activate a new virtual environment
-python -m venv .venv
+# Create and activate a new virtual environment with uv
+uv venv .venv
 source .venv/bin/activate
+pip install uv
 
 # Sync dependencies exactly as specified in pyproject.toml and uv.lock
-uv sync
+uv sync --all-extras
 
 # Install pre-commit hooks (Ruff runs automatically before commits)
 pre-commit install

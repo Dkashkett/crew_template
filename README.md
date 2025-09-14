@@ -1,24 +1,11 @@
-## Setup Instructions
+# Setup Instructions
+1. Create and activate a virtual environment 
+2. Install uv `pip install uv`
+3. Sync all dependencies via `uv sync --all-extras`
+4. Install pre-commit hooks by running `pre-commit install`. Ruff will run automatically before commits.
+5. Create a `.env.local` file in the root directory and add your environment variables
 
-Follow these steps after cloning the repository:
-
-First, ensure you have `uv` installed. https://docs.astral.sh/uv/getting-started/installation/
-
-Next, run the following commands:
-```bash
-# Create and activate a new virtual environment with uv
-uv venv .venv
-source .venv/bin/activate
-pip install uv
-
-# Sync dependencies exactly as specified in pyproject.toml and uv.lock
-uv sync --all-extras
-
-# Install pre-commit hooks (Ruff runs automatically before commits)
-pre-commit install
-```
-
-Docker
+### Docker (Optional)
 ```bash
 docker build -t crew-template .
 

@@ -3,12 +3,17 @@
 Follow these steps after cloning the repository:
 
 ```bash
+# Create and activate a new virtual environment
+python -m venv .venv
+source .venv/bin/activate
+
 # Sync dependencies exactly as specified in pyproject.toml and uv.lock
 uv sync
 
 # Install pre-commit hooks (Ruff runs automatically before commits)
 pre-commit install
 ```
+
 Docker
 ```bash
 docker build -t crew-template .
